@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Service Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Logótipo -->
+        <div class="logo">
+            <img src="{{ url_for('static', filename='uploads/logo.png') }}" alt="Company Logo">
+        </div>
+
+        <!-- Título -->
+        <h1> Field Service Report</h1>
+
+        <!-- Formulário -->
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="company">Company:</label>
+                    <input type="text" name="Company" id="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" name="Address" id="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input type="text" name="Country" id="country" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact_person">Contact Person:</label>
+                    <input type="text" name="Contact Person" id="contact_person" required>
+                </div>
+                <div class="form-group">
+                    <label for="k_nr">K-Nr:</label>
+                    <input type="text" name="K-Nr" id="k_nr" required>
+                </div>
+                <div class="form-group">
+                    <label for="creation_date">Creation Date:</label>
+                    <input type="date" name="Creation Date" id="creation_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="technician">Technician:</label>
+                    <input type="text" name="Technician" id="technician" required>
+                </div>
+                <div class="form-group">
+                    <label for="assembly_start">Assembly Start:</label>
+                    <input type="date" name="Assembly Start" id="assembly_start" required>
+                </div>
+                <div class="form-group">
+                    <label for="assembly_end">Assembly End:</label>
+                    <input type="date" name="Assembly End" id="assembly_end" required>
+                </div>
+                <div class="form-group full-width">
+                    <label for="machine_type_number">Machine Type and Number:</label>
+                    <input type="text" name="Machine Type and Number" id="machine_type_number" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="before_image">Foto Antes:</label>
+                <input type="file" name="before_image" id="before_image" required>
+            </div>
+            <div class="form-group">
+                <label for="after_image">Foto Depois:</label>
+                <input type="file" name="after_image" id="after_image" required>
+            </div>
+            <div class="form-group full-width">
+                <label for="Service">Service:</label>
+                <textarea name="Service" id="Service" rows="5" placeholder="Enter points as a checklist, one per line." required></textarea>
+            </div>
+            <div class="form-group full-width">
+                <label for="Further Actions">Further Actions:</label>
+                <textarea name="Further Actions" id="Further Actions" rows="5" placeholder="Enter points as a checklist, one per line." required></textarea>
+            </div>
+            <div class="form-group full width">
+                <label for="Parts to be quoted">Parts to be quoted:</label>
+                <textarea name="Parts to be quoted" id="Parts to be quoted" rows="5" placeholder="Enter points as a checklist, one per line." required></textarea>
+            </div>
+            <div class="form-actions">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
